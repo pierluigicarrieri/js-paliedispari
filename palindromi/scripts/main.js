@@ -19,7 +19,7 @@ const result = wordChecker(wordToCheck);
 
 // Output
 
-resultElement.innerHTML = "Inserted word is " + result;
+resultElement.innerHTML = "Inserted word " + result;
 
 }
 )
@@ -35,19 +35,18 @@ function wordChecker (wordToCheckParameter) {
 
     for (let i = 0; i < (k / 2); i++) {
 
-        if (wordToCheckParameter.charAt(i) !== wordToCheckParameter.charAt(k - 1 - i)) {
+        if (wordToCheckParameter[i] !== wordToCheckParameter[k - 1 - i]) {
 
             return "is not a palindrome";
 
-        } else {
-            
-            return "is a palindrome";
-        
         }
 
-    }
-
+    }        
+    
+    return "is a palindrome";
+        
 }
+
 
 
 
